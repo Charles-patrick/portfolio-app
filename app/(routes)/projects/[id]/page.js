@@ -1,8 +1,9 @@
 "use client";
 import { MyProjects } from "@/data";
 import Contact from "@/layout/Homepage/Contact";
+import Image from "next/image";
 import { useParams } from "next/navigation";
-export default function page() {
+export default function Page() {
   const params = useParams();
   const param = params.id;
   return (
@@ -12,7 +13,15 @@ export default function page() {
         {MyProjects.filter((id) => id.id === param).map((project) => (
           <div key={project.id}>
             <p className="text-3xl font-bold text-center"> {project.name}</p>
-            <img src={project.img} alt={project.name} className="rounded-md" />
+            <div className="relative w-200 h-100 max-w-[600px]  ">
+              <Image
+                src={project.img}
+                alt={project.name}
+                fill
+                className="object-cover rounded-md"
+                priority
+              />
+            </div> 
           </div>
         ))}
       </div>
