@@ -42,7 +42,7 @@ export function ContactForm() {
           name: data.name,
           email: data.email,
           message: data.description,
-          _replyto: "someone@example.com",
+          _replyto: "ebukacharles006@gmail.com",
           _subject: "New Contact Form Submission",
         }),
       });

@@ -1,10 +1,9 @@
 "use client";
 import { useEffect, useState } from "react";
 import { NavData } from "@/data";
-import { ThemeButton , ThemeButtonMobile } from "@/components/ui/theme-button";
+import { ThemeButton, ThemeButtonMobile } from "@/components/ui/theme-button";
 import { useTheme } from "next-themes";
 import Hamburger from "hamburger-react";
-
 
 export default function Navbar() {
   const [showNavbar, setShowNavbar] = useState(true);
@@ -140,12 +139,11 @@ export default function Navbar() {
                   setShowHamburgerDropdown={setShowHamburgerDropdown}
                 />
                 {showHamburgerDropdown && (
-                  <div
-                    className="mt-2 bg-white dark:bg-black rounded-b-md z-50 text-sm">
+                  <div className="mt-2 bg-white dark:bg-black rounded-b-md z-50 text-sm">
                     <button
                       onClick={() => {
                         setTheme("dark");
-                        setShowHamburgerDropdown(false);
+                        setHamburgerOpen(false);
                       }}
                       className="w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">
                       Dark
@@ -153,7 +151,7 @@ export default function Navbar() {
                     <button
                       onClick={() => {
                         setTheme("light");
-                        setShowHamburgerDropdown(false);
+                        setHamburgerOpen(false);
                       }}
                       className="w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">
                       Light
@@ -161,7 +159,7 @@ export default function Navbar() {
                     <button
                       onClick={() => {
                         setTheme("system");
-                        setShowHamburgerDropdown(false);
+                        setHamburgerOpen(false);
                       }}
                       className="w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">
                       System
@@ -176,4 +174,3 @@ export default function Navbar() {
     </>
   );
 }
- 
