@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { MapPin } from "lucide-react";
 import TypingText from "@/components/typingtext";
+import Button from "@/components/ui/button";
 
 export default function Main() {
   return (
@@ -31,9 +32,9 @@ export default function Main() {
               </span>
               <p>
                 {" "}
-                I build beautiful, responsive websites that combine sleek
-                design with smooth user experience — turning ideas into
-                pixel-perfect interfaces.
+                I build beautiful, responsive websites that combine sleek design
+                with smooth user experience — turning ideas into pixel-perfect
+                interfaces.
               </p>
               <Link href="/" className="hover:underline py-5">
                 Download CV
