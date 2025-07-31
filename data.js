@@ -10,8 +10,8 @@ export const NavData = [
     icon: <Home />,
   },
   {
-    label: "services",
-    href: "/#services",
+    label: "ToolKit",
+    href: "/#toolkit",
     icon: <Briefcase />,
   },
   {

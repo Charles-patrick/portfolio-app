@@ -9,35 +9,29 @@ export default function Main() {
     <div className="">
       <section
         id="home"
-        className="flex justify-center items-center min-h-screen py-5 md:py-20 dark-bg-black ">
+        className="flex justify-center items-center min-h-screen py-10 md:py-20 dark-bg-black ">
         <div className="max-w-6xl mx-auto px-6 md:px-8">
-          <div className="flex flex-col md:flex-row items-center gap-12">
+          <div className="flex flex-col-reverse md:flex-row items-center gap-12">
             {/* Text Content */}
             <div className="md:w-2/3 space-y-6">
               <div className="space-y-4">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                  Hi, I'm <span className="text-blue-600">Lebron James</span>
+                  Hi, I'm{" "}
+                  <span className="text-blue-600">Onuora Chukwuebuka</span>
                 </h1>
                 <h2 className="text-2xl md:text-3xl text-gray-600 dark:text-white">
                   I'm a <TypingText />
                 </h2>
               </div>
-
-              <div className="flex items-center text-gray-500 space-x-2">
-                <MapPin className="h-5 w-5" />
-                <span>Lagos, Nigeria</span>
-              </div>
-
               <p className="text-lg text-gray-600 dark:text-white leading-relaxed max-w-2xl">
                 I craft elegant, responsive digital experiences that blend
-                intuitive design with seamless functionality. With a focus on
-                performance and accessibility, I transform complex requirements
-                into clean, user-friendly interfaces.
+                intuitive design with seamless functionality , delivering
+                polished, user-first interfaces.
               </p>
 
               <div className="grid grid-cols-1 gap-4 pt-4 w-full">
                 <button
-                  href='#contact'
+                  href="#contact"
                   className="w-full px-4 md:px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-all">
                   Contact Me
                 </button>

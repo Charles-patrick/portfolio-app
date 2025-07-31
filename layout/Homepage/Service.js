@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Service() {
   return (
     <div>
-      <section id="services" className="py-10">
+      <section id="toolkit" className="py-10">
         <div className="flex justify-center items-center flex-col">
           <p className="text-center font-semibold">My Stacks</p>
 
