@@ -36,7 +36,9 @@ export default function Main() {
               </p>
 
               <div className="grid grid-cols-1 gap-4 pt-4 w-full">
-                <button className="w-full px-4 md:px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-all">
+                <button
+                  href='#contact'
+                  className="w-full px-4 md:px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-all">
                   Contact Me
                 </button>
                 <Link

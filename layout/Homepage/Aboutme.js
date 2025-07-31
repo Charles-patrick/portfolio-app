@@ -47,7 +47,7 @@ export default function Aboutme() {
               {Education.map((data, idx) => (
                 <div
                   key={idx}
-                  className="border-l-[0.1px] border-gray-300 px-5 mt-4">
+                  className="border-l-[0.1px] border-gray-300 px-5 mt-4 mb-5">
                   <span className="flex gap-x-0.5">
                     {" "}
                     <MapPin /> {data.location}{" "}
@@ -57,7 +57,7 @@ export default function Aboutme() {
                     <div>{data.date}</div>
                   </span>
                   <p>{data.uni}</p>
-                  <p className="pt-4">{data.goal}</p>
+                  <p className="pt-2">{data.goal}</p>
                 </div>
               ))}
             </div>
