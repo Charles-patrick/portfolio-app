@@ -34,26 +34,26 @@ export const NavData = [
 export const MyProjects = [
   {
     id: "1",
-    name: "Brandify",
-    info: "Agency Website",
+    name: "Kadick Integrated Limited",
+    info: "Agency Banking Website",
     img: "/project1.avif",
   },
   {
     id: "2",
-    name: "Shiro",
-    info: "Personal Portfolio",
+    name: "Blog App",
+    info: "A Blog Application ",
     img: "/project2.avif",
   },
   {
     id: "3",
-    name: "Vivid",
-    info: "App Showcase",
+    name: "Portfolio",
+    info: "A portfolio Template",
     img: "/project3.avif",
   },
   {
     id: "4",
-    name: "Capture",
-    info: "Video Agency",
+    name: "Recipe Radar",
+    info: "A Recipe Finder",
     img: "/project4.avif",
   },
   {
@@ -84,10 +84,10 @@ export const MyProjects = [
 
 export const Experience = [
   {
-    location: "San Francisco, CA",
-    occupation: "Digital Innovations Agency",
-    date: "Jan 2019 – Present",
-    position: "Senior Web Designer",
+    location: "Lagos , Nigeria",
+    occupation: "Kadick Integrated Limited",
+    date: "April 2025 – Present",
+    position: "Web Developer Intern",
     works: [
       "Assisted in the design and development of client websites under the guidance of senior designers.",
       "Maintained and updated existing websites, ensuring they met modern web standards.",
@@ -96,59 +96,34 @@ export const Experience = [
     ],
   },
   {
-    location: "San Francisco, CA",
-    occupation: "Digital Innovations Agency",
+    location: "Lagos , Nigeria",
+    occupation: "Speak Out Africa",
     date: "Jan 2019 – Present",
-    position: "Senior Web Designer",
+    position: "Web Developer",
     works: [
       "Assisted in the design and development of client websites under the guidance of senior designers.",
       "Maintained and updated existing websites, ensuring they met modern web standards.",
       "Participated in client meetings to gather requirements and present design proposals.",
       "Developed basic HTML and CSS coding skills to support design projects.",
     ],
-  },
-  {
-    location: "San Francisco, CA",
-    occupation: "Digital Innovations Agency",
-    date: "Jan 2019 – Present",
-    position: "Senior Web Designer",
-    works: [
-      "Assisted in the design and development of client websites under the guidance of senior designers.",
-      "Maintained and updated existing websites, ensuring they met modern web standards.",
-      "Participated in client meetings to gather requirements and present design proposals.",
-      "Developed basic HTML and CSS coding skills to support design projects.",
-    ],
-  },
-  {
-    location: "San Francisco, CA",
-    occupation: "Digital Innovations Agency",
-    date: "Jan 2019 – Present",
-    position: "Senior Web Designer",
-    works: [
-      "Assisted in the design and development of client websites under the guidance of senior designers.",
-      "Maintained and updated existing websites, ensuring they met modern web standards.",
-      "Participated in client meetings to gather requirements and present design proposals.",
-      "Developed basic HTML and CSS coding skills to support design projects.",
-    ],
-  },
+  }
 ];
 
 export const Education = [
   {
-    location: "Berkeley, CA",
-    course: "Master of Science in Web Design and Development",
-    date: "Apr 2008 - May 2013",
-    uni: "University of California",
+    location: "Anambra state , Nigeria",
+    course: "Computer Science",
+    date: "May 2023 - Present",
+    uni: "Nnamdi Azikiwe University",
     goal: "Focused on advanced web technologies, user experience design, and front-end development.",
   },
   {
-    location: "Berkeley, CA",
+    location: "Anambra state , Nigeria",
     course: "Master of Science in Web Design and Development",
     date: "Jan  2006 - Mar 2008",
-    uni: "University of California",
+    uni: "Marist Comprehensive College",
     goal: "Focused on advanced web technologies, user experience design, and front-end development.",
   },
-  
 ];
 
 
@@ -157,19 +132,21 @@ export const Socials = [
     social: "Email",
     links: [
       {
-      info: "someone@example.com",
-      icon: <Mail />,
-      href: "mailto:someone@example.com",
-    },
-    ]
+        info: "ebukacharles006@gmail.com",
+        icon: <Mail />,
+        href: "mailto:ebukacharles006@gmail.com",
+      },
+    ],
   },
   {
     social: "Phone",
-    links: [{
-      info: "0811-222-3333",
-      icon: <Phone />,
-      href: "tel:+2348012345678",
-    },]
+    links: [
+      {
+        info: "0811-220-5847",
+        icon: <Phone />,
+        href: "tel:+2348112205847",
+      },
+    ],
   },
   {
     social: "Socials",
@@ -177,17 +154,17 @@ export const Socials = [
       {
         info: "Twitter",
         icon: <Twitter />,
-        href: "",
+        href: "https://x.com/bigw1z?s=21",
       },
       {
         info: "Instagram",
         icon: <Instagram />,
-        href: "",
+        href: "https://www.instagram.com/_____random_jpg/profilecard/?igsh=MXJnamZ2bHl5eXhldQ==",
       },
       {
         info: "LinkedIn",
         icon: <Linkedin />,
-        href: "",
+        href: "https://www.linkedin.com/in/chukwuebuka-onuora-67b4b4274?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
       },
     ],
   },

@@ -7,11 +7,11 @@ export default function Projects() {
   return (
     <div>
       <section id="projects" className=" pt-10">
-        <div className="flex justify-center items-center flex-col mx-auto max-w-[70rem] w-full px-4">
+        <div className="flex justify-center flex-col md:items-center mx-auto max-w-[70rem] w-full px-2 md:px-4">
           <div className="py-6">
             <div className="flex justify-between items-center ">
               <div>
-                <p className="text-lg font-semibold">Some of My Projects</p>
+                <p className="text-lg font-semibold">My Projects</p>
               </div>
               <div>
                 <Link

@@ -1,44 +1,65 @@
-'use client'
+"use client";
 import Link from "next/link";
 import Image from "next/image";
-import { MapPin } from "lucide-react";
+import { MapPin, Download } from "lucide-react";
 import TypingText from "@/components/typingtext";
-import Button from "@/components/ui/button";
 
 export default function Main() {
   return (
-    <div>
+    <div className="">
       <section
         id="home"
-        className="flex justify-center items-center min-h-screen ">
-        <div className="grid grid-cols-1 md:grid-cols-2 max-w-[1200px] w-full mx-auto items-center px-4 gap-6 pt-[50px]">
-          <div className="flex justify-center h-[300px] md:h-auto">
-            <Image
-              src="/user3.jpg"
-              alt=""
-              width={300}
-              height={100}
-              className="object-cover rounded-md w-full max-w-[300px] h-full"
-            />
-          </div>
-          <div>
-            <div>
-              <p className="text-3xl md:text-5xl">
-                {" "}
-                Hi ,I`m Lebron James , a <TypingText />
+        className="flex justify-center items-center min-h-screen py-5 md:py-20 dark-bg-black ">
+        <div className="max-w-6xl mx-auto px-6 md:px-8">
+          <div className="flex flex-col md:flex-row items-center gap-12">
+            {/* Text Content */}
+            <div className="md:w-2/3 space-y-6">
+              <div className="space-y-4">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                  Hi, I'm <span className="text-blue-600">Lebron James</span>
+                </h1>
+                <h2 className="text-2xl md:text-3xl text-gray-600 dark:text-white">
+                  I'm a <TypingText />
+                </h2>
+              </div>
+
+              <div className="flex items-center text-gray-500 space-x-2">
+                <MapPin className="h-5 w-5" />
+                <span>Lagos, Nigeria</span>
+              </div>
+
+              <p className="text-lg text-gray-600 dark:text-white leading-relaxed max-w-2xl">
+                I craft elegant, responsive digital experiences that blend
+                intuitive design with seamless functionality. With a focus on
+                performance and accessibility, I transform complex requirements
+                into clean, user-friendly interfaces.
               </p>
-              <span className="flex gap-1 py-5">
-                <MapPin /> Nigeria
-              </span>
-              <p>
-                {" "}
-                I build beautiful, responsive websites that combine sleek design
-                with smooth user experience — turning ideas into pixel-perfect
-                interfaces.
-              </p>
-              <Link href="/" className="hover:underline py-5">
-                Download CV
-              </Link>
+
+              <div className="grid grid-cols-1 gap-4 pt-4 w-full">
+                <button className="w-full px-4 md:px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-all">
+                  Contact Me
+                </button>
+                <Link
+                  href=""
+                  download
+                  className="w-full flex items-center justify-center gap-2 px-3 md:px-6 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 transition-all">
+                  <Download className="h-5 w-5" />
+                  <span>Download CV</span>
+                </Link>
+              </div>
+            </div>
+
+            {/* Optional Image - More subtle and professional */}
+            <div className="md:w-1/3 flex justify-center">
+              <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-xl">
+                <Image
+                  src="/user3.jpg"
+                  alt="Lebron James - Web Developer"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
             </div>
           </div>
         </div>

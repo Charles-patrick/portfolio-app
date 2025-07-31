@@ -8,7 +8,7 @@ export default function page() {
   return (
     <>
       <div className="flex flex-col justify-center items-center py-20">
-        <p className="font-3xl text-bold">Projects</p>
+        <p className="text-3xl font-bold">Projects</p>
         {/* CORRECT NAVBAR ISSUES */}
         {MyProjects.map((project, idx) => (
           <div
@@ -16,7 +16,7 @@ export default function page() {
             className="flex flex-col w-full max-w-[500px]   shadow-md rounded-md border my-3 md:my-10">
             <div>
               {project.img && (
-                <div className="relative w-full h-100">
+                <div className="relative w-full h-100"> 
                   <Image
                     src={project.img}
                     alt={project.name}
