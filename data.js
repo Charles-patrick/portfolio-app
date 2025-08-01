@@ -1,12 +1,14 @@
 import { Instagram, Linkedin, Mail, Twitter, Phone } from "lucide-react";
 import { Home, Briefcase, Code, Send } from "lucide-react";
-
-
+import BlogProjectPage from "./layout/ProjectDetails/blog";
+import KadickProjectPage from "./layout/ProjectDetails/kadick";
+import PortfolioProjectPage from "./layout/ProjectDetails/portfolio";
+import RecipeRadarProjectPage from "./layout/ProjectDetails/reciperadar";
 
 export const NavData = [
   {
     label: "Home",
-    href: "/",
+    href: "/#home",
     icon: <Home />,
   },
   {
@@ -36,49 +38,33 @@ export const MyProjects = [
     id: "1",
     name: "Kadick Integrated Limited",
     info: "Agency Banking Website",
-    img: "/project1.avif",
+    img: "/kadick.png",
+    content: <KadickProjectPage />,
+    link: "https://frontend-official-website-acb2a866bd2d.herokuapp.com/",
   },
   {
     id: "2",
     name: "Blog App",
     info: "A Blog Application ",
-    img: "/project2.avif",
+    img: "/blog.png",
+    content: <BlogProjectPage />,
+    link: "https://blog-app-omega-virid.vercel.app/",
   },
   {
     id: "3",
     name: "Portfolio",
     info: "A portfolio Template",
-    img: "/project3.avif",
+    img: "/portfolio.png",
+    content: <PortfolioProjectPage />,
+    link: "https://portfolio-app-brown-six.vercel.app/",
   },
   {
     id: "4",
     name: "Recipe Radar",
     info: "A Recipe Finder",
-    img: "/project4.avif",
-  },
-  {
-    id: "5",
-    name: "Brandify",
-    info: "Agency Website",
-    img: "/project1.avif",
-  },
-  {
-    id: "6",
-    name: "Shiro",
-    info: "Personal Portfolio",
-    img: "/project2.avif",
-  },
-  {
-    id: "7",
-    name: "Vivid",
-    info: "App Showcase",
-    img: "/project3.avif",
-  },
-  {
-    id: "8",
-    name: "Capture",
-    info: "Video Agency",
-    img: "/project4.avif",
+    img: "/reciperadar.png",
+    content: <RecipeRadarProjectPage />,
+    link: "https://recipe-radar-9hry.vercel.app/",
   },
 ];
 
@@ -106,22 +92,22 @@ export const Experience = [
       "Participated in client meetings to gather requirements and present design proposals.",
       "Developed basic HTML and CSS coding skills to support design projects.",
     ],
-  }
+  },
 ];
 
 export const Education = [
   {
     location: "Anambra state , Nigeria",
-    course: "Computer Science",
+    course: "Nnamdi Azikiwe University",
     date: "May 2023 - Present",
-    uni: "Nnamdi Azikiwe University",
+    uni: "Computer Science",
     goal: "Focused on advanced web technologies, user experience design, and front-end development.",
   },
   {
     location: "Anambra state , Nigeria",
-    course: "Master of Science in Web Design and Development",
+    course: "Marist Comprehensive College",
     date: "Jan  2006 - Mar 2008",
-    uni: "Marist Comprehensive College",
+    uni: "Master of Science in Web Design and Development",
     goal: "Focused on advanced web technologies, user experience design, and front-end development.",
   },
 ];

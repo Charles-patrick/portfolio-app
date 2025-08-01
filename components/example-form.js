@@ -1,11 +1,9 @@
 "use client";
-
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { useState } from "react";
+import { useForm as useFormspreeForm } from "@formspree/react";
 import { toast } from "sonner";
-
 
 // Form validation schema
 const formSchema = z.object({
@@ -17,8 +15,7 @@ const formSchema = z.object({
 });
 
 export function ContactForm() {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
+  const [state, handleSubmit] = useFormspreeForm("xyzpprzg");
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -29,44 +26,28 @@ export function ContactForm() {
   });
 
   const onSubmit = async (data) => {
-    setIsSubmitting(true);
+    const response = await handleSubmit({
+      name: data.name,
+      email: data.email,
+      message: data.description,
+      _replyto: data.email, // Using submitter's email as reply-to
+      _subject: "New Contact Form Submission",
+    });
 
-    try {
-      // Using Formspree to send the email
-      const response = await fetch("https://formspree.io/f/mvoeqyov", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: data.name,
-          email: data.email,
-          message: data.description,
-          _replyto: "ebukacharles006@gmail.com",
-          _subject: "New Contact Form Submission",
-        }),
+    if (state.succeeded) {
+      toast.success("Message sent successfully!", {
+        position: "bottom-right",
       });
-
-      if (response.ok) {
-        toast.success("Message sent successfully!", {
-          position: "bottom-right",
-        });
-        form.reset();
-      } else {
-        throw new Error("Failed to send message");
-      }
-    } catch (error) {
+      form.reset();
+    } else {
       toast.error("Something went wrong. Please try again.", {
         position: "bottom-right",
       });
-      console.error("Submission error:", error);
-    } finally {
-      setIsSubmitting(false);
     }
   };
 
   return (
-    <div className="max-w-[900px] mx-auto p-6  rounded-lg shadow-md mt-5">
+    <div className="max-w-[900px] mx-auto p-6 rounded-lg shadow-md mt-5">
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
         {/* Name Field */}
         <div className="space-y-2">
@@ -141,15 +122,14 @@ export function ContactForm() {
         {/* Submit Button */}
         <button
           type="submit"
-          disabled={isSubmitting}
+          disabled={state.submitting}
           className={`w-full py-2 px-4 rounded-md text-white font-medium ${
-            isSubmitting
+            state.submitting
               ? "bg-gray-400 cursor-not-allowed"
               : "bg-black text-white dark:bg-white dark:text-black hover:bg-gray-400 dark:hover:bg-gray-400"
           }`}>
-          {isSubmitting ? "Sending..." : "Send Message"}
+          {state.submitting ? "Sending..." : "Send Message"}
         </button>
-
       </form>
     </div>
   );

@@ -16,19 +16,19 @@ export default function page() {
             className="flex flex-col w-full max-w-[500px]   shadow-md rounded-md border my-3 md:my-10">
             <div>
               {project.img && (
-                <div className="relative w-full h-100"> 
+                <div className="relative w-full h-60"> 
                   <Image
                     src={project.img}
                     alt={project.name}
                     fill
-                    className="object-cover rounded-t-md "
+                    className=" rounded-t-md "
                     priority
                   />
                 </div>
               )}
               <div className="p-4">
                 <span className="flex justify-between items-center group">
-                  <p>{project.name}</p>
+                  <p className="font-bold">{project.name}</p>
                   <Link href={`/projects/${project.id}`}> 
                     <ArrowRight className="transition-transform duration-300 hover:-rotate-45" />
                   </Link>

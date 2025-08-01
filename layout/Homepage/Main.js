@@ -30,11 +30,12 @@ export default function Main() {
               </p>
 
               <div className="grid grid-cols-1 gap-4 pt-4 w-full">
-                <button
-                  href="#contact"
-                  className="w-full px-4 md:px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-all">
-                  Contact Me
-                </button>
+                  <Link
+                    href="/#contact"
+                    className="w-full text-center px-4 md:px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-all">
+                    {" "}
+                    Contact Me
+                  </Link>
                 <Link
                   href=""
                   download

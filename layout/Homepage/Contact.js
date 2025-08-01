@@ -1,4 +1,5 @@
 import { ContactForm } from '@/components/example-form';
+import FormSpreeForm from '@/components/formspree';
 import { Socials } from '@/data';
 
 export default function Contact() {
@@ -7,7 +8,9 @@ export default function Contact() {
       <section id="contact" className="">
         <div className="py-10">
           <div className="max-w-[900px] mx-auto">
-            <p className="font-semibold py-3">Let`s Talk</p>
+            <p className="font-semibold py-3 text-3xl md:text-4xl">
+              Let`s Talk
+            </p>
             <div className="grid grid-cols-1 md:grid-cols-2">
               <div className="h-[300px] md:h-[450px] flex flex-col justify-between py-[3px] md:py-[60px]">
                 {Socials.map((data, idx) => (

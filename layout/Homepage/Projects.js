@@ -11,7 +11,9 @@ export default function Projects() {
           <div className="py-6">
             <div className="flex justify-between items-center ">
               <div>
-                <p className="text-lg font-semibold">My Projects</p>
+                <p className="font-semibold text-3xl md:text-5xl">
+                  My Projects
+                </p>
               </div>
               <div>
                 <Link
@@ -32,17 +34,22 @@ export default function Projects() {
                 <div
                   key={idx}
                   className="w-full sm:w-[290px] lg:w-[400px] shadow-md rounded-md transition-transform duration-300 hover:scale-105">
-                  <div className="relative w-full h-45">
+                  <div className="relative w-full aspect-[3/2]">
                     <Image
                       src={data.img}
                       alt={data.name}
                       fill
-                      className="object-cover rounded-t-md "
+                      className="object-contain rounded-t-md bg-gray-100"
                       priority
                     />
                   </div>
                   <div className="px-3 py-3">
-                    <p className="font-semibold">{data.name}</p>
+                    <span className="flex justify-between items-center group">
+                      <p className="font-bold">{data.name}</p>
+                      <Link href={`/projects/${data.id}`}>
+                        <ArrowRight className="transition-transform duration-300 hover:-rotate-45" />
+                      </Link>
+                    </span>
                     <p>{data.info}</p>
                   </div>
                 </div>

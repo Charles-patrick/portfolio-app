@@ -134,7 +134,7 @@ export default function Navbar() {
                   {item.label}
                 </a>
               ))}
-              <div className="border-t border-gray-200 dark:border-gray-700">
+              <div className="border-t border-gray-200 dark:border-gray-700 py-3">
                 <ThemeButtonMobile
                   setShowHamburgerDropdown={setShowHamburgerDropdown}
                 />
