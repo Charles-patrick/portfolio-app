@@ -22,7 +22,7 @@ export const NavData = [
     icon: <Code />,
   },
   {
-    label: "about Me",
+    label: "About Me",
     href: "/#aboutme",
     icon: <Send />,
   },
@@ -83,14 +83,13 @@ export const Experience = [
   },
   {
     location: "Lagos , Nigeria",
-    occupation: "Speak Out Africa",
-    date: "Jan 2019 – Present",
+    occupation: "Speak Out Africa NGO",
+    date: "Jan 2023 – July 2023",
     position: "Web Developer",
     works: [
-      "Assisted in the design and development of client websites under the guidance of senior designers.",
+      "Assisted in the design and development of client websites",
       "Maintained and updated existing websites, ensuring they met modern web standards.",
-      "Participated in client meetings to gather requirements and present design proposals.",
-      "Developed basic HTML and CSS coding skills to support design projects.",
+      "Developed basic HTML, CSS and Javascript coding skills to support design projects.",
     ],
   },
 ];
@@ -101,13 +100,6 @@ export const Education = [
     course: "Nnamdi Azikiwe University",
     date: "May 2023 - Present",
     uni: "Computer Science",
-    goal: "Focused on advanced web technologies, user experience design, and front-end development.",
-  },
-  {
-    location: "Anambra state , Nigeria",
-    course: "Marist Comprehensive College",
-    date: "Jan  2006 - Mar 2008",
-    uni: "Master of Science in Web Design and Development",
     goal: "Focused on advanced web technologies, user experience design, and front-end development.",
   },
 ];

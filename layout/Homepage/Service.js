@@ -6,7 +6,7 @@ export default function Service() {
     <div>
       <section id="toolkit" className="py-10">
         <div className="flex justify-center items-center flex-col">
-          <p className="text-center font-semibold text-3xl md:text-5xl">ToolKits</p>
+          <p className="text-center font-semibold text-3xl md:text-5xl">ToolKit</p>
 
           <div className="my-5 grid grid-cols-2 md:grid-cols-4 xl:grid-cols-8 gap-10">
             {Stack.map((data, idx) => (
