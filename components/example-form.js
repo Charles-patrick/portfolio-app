@@ -10,7 +10,7 @@ const formSchema = z.object({
   email: z.string().email({ message: "Please enter a valid email" }),
   description: z
     .string()
-    .min(10, { message: "Description must be at least 10 characters" }),
+    .min(5, { message: "Description must be at least 5 characters" }),
 });
 
 export function ContactForm() {
