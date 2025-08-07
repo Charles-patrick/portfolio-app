@@ -5,7 +5,6 @@ import { z } from "zod";
 import { useForm as useFormspreeForm } from "@formspree/react";
 import { toast } from "sonner";
 
-// Form validation schema
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters" }),
   email: z.string().email({ message: "Please enter a valid email" }),
@@ -15,7 +14,7 @@ const formSchema = z.object({
 });
 
 export function ContactForm() {
-  const [state, handleSubmit] = useFormspreeForm("xyzpprzg");
+  const [formspreeState, formspreeHandleSubmit] = useFormspreeForm("xyzpprzg");
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -26,23 +25,35 @@ export function ContactForm() {
   });
 
   const onSubmit = async (data) => {
-    const response = await handleSubmit({
-      name: data.name,
-      email: data.email,
-      message: data.description,
-      _replyto: data.email, // Using submitter's email as reply-to
-      _subject: "New Contact Form Submission",
-    });
-
-    if (state.succeeded) {
-      toast.success("Message sent successfully!", {
-        position: "bottom-right",
+    try {
+      // Submit to Formspree
+      const response = await fetch("https://formspree.io/f/xyzpprzg", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          message: data.description,
+          _replyto: data.email,
+          _subject: "New Contact Form Submission",
+        }),
       });
-      form.reset();
-    } else {
+
+      if (response.ok) {
+        toast.success("Message sent successfully!", {
+          position: "bottom-right",
+        });
+        form.reset();
+      } else {
+        throw new Error("Form submission failed");
+      }
+    } catch (error) {
       toast.error("Something went wrong. Please try again.", {
         position: "bottom-right",
       });
+      console.error("Submission error:", error);
     }
   };
 
@@ -122,13 +133,13 @@ export function ContactForm() {
         {/* Submit Button */}
         <button
           type="submit"
-          disabled={state.submitting}
+          disabled={form.formState.isSubmitting}
           className={`w-full py-2 px-4 rounded-md text-white font-medium ${
-            state.submitting
+            form.formState.isSubmitting
               ? "bg-gray-400 cursor-not-allowed"
               : "bg-black text-white dark:bg-white dark:text-black hover:bg-gray-400 dark:hover:bg-gray-400"
           }`}>
-          {state.submitting ? "Sending..." : "Send Message"}
+          {form.formState.isSubmitting ? "Sending..." : "Send Message"}
         </button>
       </form>
     </div>

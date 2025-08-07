@@ -4,19 +4,14 @@ export default function PortfolioProjectPage() {
     return (
       <section className="max-w-2xl mx-auto py-3 md:py-10 px-4">
         <h1 className="text-3xl md:text-4xl font-bold mb-4 text-blue-700">
-          Personal Portfolio Website
+           Portfolio Website
         </h1>
         <p className="mb-8 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-          Welcome to my professional portfolio. I'm a passionate developer
-          specializing in modern web technologies, dedicated to crafting
-          efficient digital solutions with clean code and intuitive user
-          experiences. This space showcases my technical journey through
-          education, professional work, and hands-on projects – each
-          demonstrating my problem-solving approach and commitment to quality.
-          Below you'll find my academic background, industry experience,
-          detailed case studies of my work, and a way to connect. Whether you're
-          here to evaluate my skills or discuss opportunities, I invite you to
-          explore what I've built and how I think.
+          This is my portfolio website. This space showcases my technical journey through
+          education, professional work, and hands-on projects with details of each project.
+          It serves as a comprehensive overview of my skills, experiences, and the technologies
+          i work with  . the website is designed to be user-friendly, visually appealing, and responsive,
+          ensuring a seamless experience across devices.
         </p>
 
         <h2 className="text-xl font-semibold mt-8 mb-2">Core Features</h2>
@@ -55,7 +50,7 @@ export default function PortfolioProjectPage() {
               </tr>
               <tr>
                 <td className="py-2 px-4 border-b">Forms</td>
-                <td className="py-2 px-4 border-b">React Hook Form</td>
+                <td className="py-2 px-4 border-b">Formspree</td>
               </tr>
               <tr>
                 <td className="py-2 px-4 border-b">Deployment</td>

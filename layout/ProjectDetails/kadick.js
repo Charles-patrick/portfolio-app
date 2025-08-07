@@ -12,7 +12,7 @@ export default function KadickProjectPage() {
         showcase the company’s services, products, and solutions in the
         financial and telecommunications sectors. The site serves as a digital
         hub for Kadick’s agency banking operations, providing clear information
-        about our offerings, including mobile money, bill payments, airtime
+        about our offerings, including , bill payments, airtime
         top-ups, and other telco-related services. Visitors can explore detailed
         product pages, learn about our business model, and access resources
         tailored for agents and partners. The website is built to drive

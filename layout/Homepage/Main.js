@@ -37,7 +37,7 @@ export default function Main() {
                     Contact Me
                   </Link>
                 <Link
-                  href=""
+                  href="/resume.pdf"
                   download
                   className="w-full flex items-center justify-center gap-2 px-3 md:px-6 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 transition-all">
                   <Download className="h-5 w-5" />

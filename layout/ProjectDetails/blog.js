@@ -13,13 +13,13 @@ export default function BlogProjectPage() {
         Github accounts and write their own blog posts. The intuitive interface
         makes publishing accessible while maintaining robust security through
         proper authentication flows and data protection.
-          </p>
+        </p>
           
           
       <h2 className="text-xl font-semibold mt-8 mb-2">Core Features</h2>
       <ul className="list-disc ml-6 mb-6 text-gray-700 dark:text-gray-300">
         <li>Dual authentication (GitHub OAuth + email/password)</li>
-        <li>User blog creation/editing interface</li>
+        <li>User blog creation interface</li>
         <li>Responsive reading experience</li>
         <li>Dark mode toggle for accessibility</li>
       </ul>
@@ -43,10 +43,6 @@ export default function BlogProjectPage() {
               <td className="py-2 px-4 border-b">
                 NextAuth.js (GitHub + Credentials)
               </td>
-            </tr>
-            <tr>
-              <td className="py-2 px-4 border-b">Database</td>
-              <td className="py-2 px-4 border-b">MongoDB</td>
             </tr>
             <tr>
               <td className="py-2 px-4 border-b">Styling</td>

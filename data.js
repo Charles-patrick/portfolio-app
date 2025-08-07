@@ -78,17 +78,25 @@ export const Experience = [
       "Assisted in the design and development of client websites under the guidance of senior designers.",
       "Maintained and updated existing websites, ensuring they met modern web standards.",
       "Participated in client meetings to gather requirements and present design proposals.",
-      "Developed basic HTML and CSS coding skills to support design projects.",
     ],
   },
   {
     location: "Lagos , Nigeria",
     occupation: "Speak Out Africa NGO",
+    date: "Feb 2023 – June 2023",
+    position: "Web Developer",
+    works: [
+      "Developed multiple pages of client websites",
+      "Developed basic HTML, CSS and Javascript coding skills to support design projects.",
+    ],
+  },
+  {
+    location: "Lagos , Nigeria",
+    occupation: "FinfastNg",
     date: "Jan 2023 – July 2023",
     position: "Web Developer",
     works: [
-      "Assisted in the design and development of client websites",
-      "Maintained and updated existing websites, ensuring they met modern web standards.",
+      "Developed multiple pages of client websites",
       "Developed basic HTML, CSS and Javascript coding skills to support design projects.",
     ],
   },

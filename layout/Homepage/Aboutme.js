@@ -16,7 +16,7 @@ export default function Aboutme() {
               {Experience.map((data, idx) => (
                 <div
                   key={idx}
-                  className="border-l-[0.1px] border-gray-300 px-5 my-3">
+                  className="border-l-[0.1px] border-gray-300 px-5 my-5">
                   <span className="flex gap-x-0.5">
                     {" "}
                     <MapPin /> {data.location}{" "}
@@ -27,7 +27,7 @@ export default function Aboutme() {
                   </span>
                   <p>{data.position}</p>
                   {data.works && (
-                    <ul className="pt-4 px-5">
+                    <ul className="pt-2 px-5">
                       {data.works.map((work, index) => (
                         <li key={index} className="list-disc pt-2">
                           {work}
