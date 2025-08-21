@@ -30,12 +30,12 @@ export default function Main() {
               </p>
 
               <div className="grid grid-cols-1 gap-4 pt-4 w-full">
-                  <Link
-                    href="/#contact"
-                    className="w-full text-center px-4 md:px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-all">
-                    {" "}
-                    Contact Me
-                  </Link>
+                <Link
+                  href="/#contact"
+                  className="w-full text-center px-4 md:px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-all">
+                  {" "}
+                  Contact Me
+                </Link>
                 <Link
                   href="/resume.pdf"
                   download
@@ -50,8 +50,8 @@ export default function Main() {
             <div className="md:w-1/3 flex justify-center">
               <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-xl">
                 <Image
-                  src="/user1.jpeg"
-                  alt="Lebron James - Web Developer"
+                  src="/user.jpg"
+                  alt="user_image"
                   fill
                   className="object-cover"
                   priority
